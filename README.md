@@ -282,6 +282,12 @@ open -> seek -> read -> close
 ```
 for each sample.
 
+This access pattern intentionally represents a naive baseline implementation. 
+The goal is not to maximize performance, but rather to expose filesystem costs 
+associated with frequent file opening, disk seeks, and small read operations. 
+Future experiments will evaluate alternative loading strategies such as 
+memory-mapped files, persistent file handles, or batched reads.
+
 Future experiments may explore:
 - memory-mapped datasets
 - prefetching strategies
