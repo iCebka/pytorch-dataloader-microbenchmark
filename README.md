@@ -33,6 +33,17 @@ pytorch-dataloader-microbenchmark
 |    |__ test_loader.py
 |    |__ test_read.py
 |
+|__ results/
+|    |__results_5gb.csv
+|    |__results_6gb.csv
+|    |__results_7gb.csv
+|    |__results_8gb.csv
+|    |__results_9gb.csv
+|    |__results_10gb.csv
+|    |__efficiency_vs_workers.png
+|    |__runtime_vs_workers.png
+|    |__throughput_vs_workers.png
+|
 |_requirements.txt
 ```
 
@@ -178,7 +189,7 @@ Runs a small DataLoader test to verify if the pipeline works properly.
 python cli.py smoke \
 --data-dir ./synthetic_data \
 --num-workers 1 \
---num_batches 3
+--num-batches 3
 ```
 
 #### Example Output:
@@ -281,6 +292,12 @@ The current baseline implementation uses naive file I/O:
 open -> seek -> read -> close
 ```
 for each sample.
+
+This access pattern intentionally represents a naive baseline implementation. 
+The goal is not to maximize performance, but rather to expose filesystem costs 
+associated with frequent file opening, disk seeks, and small read operations. 
+Future experiments will evaluate alternative loading strategies such as 
+memory-mapped files, persistent file handles, or batched reads.
 
 Future experiments may explore:
 - memory-mapped datasets
