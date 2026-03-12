@@ -178,7 +178,7 @@ Runs a small DataLoader test to verify if the pipeline works properly.
 python cli.py smoke \
 --data-dir ./synthetic_data \
 --num-workers 1 \
---num_batches 3
+--num-batches 3
 ```
 
 #### Example Output:
