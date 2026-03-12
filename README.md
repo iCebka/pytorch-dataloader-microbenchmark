@@ -33,6 +33,17 @@ pytorch-dataloader-microbenchmark
 |    |__ test_loader.py
 |    |__ test_read.py
 |
+|__ results/
+|    |__results_5gb.csv
+|    |__results_6gb.csv
+|    |__results_7gb.csv
+|    |__results_8gb.csv
+|    |__results_9gb.csv
+|    |__results_10gb.csv
+|    |__efficiency_vs_workers.png
+|    |__runtime_vs_workers.png
+|    |__throughput_vs_workers.png
+|
 |_requirements.txt
 ```
 
