@@ -1,0 +1,5 @@
+workers,time_sec,throughput_samples_per_sec,efficiency_percent,loaded_samples
+1,254.1,5158.35,100.0,1310716
+2,234.51,5589.13,54.18,1310716
+4,222.49,5891.16,28.55,1310716
+8,215.76,6074.76,14.72,1310716
